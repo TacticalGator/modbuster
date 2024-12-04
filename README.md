@@ -53,25 +53,40 @@ modbuster <OPTIONAL_FLAGS> {read,write,getfunctions} <HOST> <ADDRESS> <VALUES>
 
 ```sh
 # modbuster --help
-usage: modbuster [-h] [-s SLAVE] [-p PORT] [-v] {read,write,getfunctions}
+usage: modbuster.py [-h] [-s SLAVE] [-p PORT] [-v] [--restart-comm] [--force-listen-only] [--clear-counter] [--clear-overrun]
+                    [--getclear-res]
+                    {read,write,getfunctions,diag}
 
-  Busting ICS/SCADA over modbus
+  Busting ICS/SCADA over Modbus
 
-Examples:
-    modbuster read -s 1 127.0.0.1 400001 10
-    modbuster write 127.0.0.1 300231 11 22 33 44 55
-    modbuster getfunctions 127.0.0.1
+examples:
+       modbuster read -s 1 127.0.0.1 400001 10
+       modbuster write 127.0.0.1 300231 11 22 33 44 55
+       modbuster getfunctions 127.0.0.1
+       modbuster diag --slave 2 127.0.0.1
+       modbuster diag -s 1 127.0.0.1 --force-listen-only
 
 positional arguments:
-  {read,write,getfunctions}
-                        Command to execute: 'read', 'write', or 'getfunctions'
+  {read,write,getfunctions,diag}
+                        Command to execute:
+                          read          Read holding & input registers, coils, or disecrete inputs from a Modbus server
+                          write         Write values to registers or coils on a Modbus server
+                          getfunctions  Enumerate supported Modbus function codes
+                          diag          Perform diagnostic functions
 
 options:
   -h, --help            show this help message and exit
   -s SLAVE, --slave SLAVE
-                        Slave ID (default: 0)
-  -p PORT, --port PORT  Port to connect to (default: 502)
-  -v, --verbose         Enable verbose output
+                        Specify the slave ID (default: 0)
+  -p PORT, --port PORT  Specify the Modbus server port (default: 502)
+  -v, --verbose         Enable detailed output (verbose mode)
+
+*DANGEROUS Diagnostic Command Flags (used exclusively with "diag" command):
+  --restart-comm        Restart communication (toggle mode)
+  --force-listen-only   Force the device into listen-only mode
+  --clear-counter       Clear Modbus communication counters
+  --clear-overrun       Clear character overrun counters
+  --getclear-res        Retrieve and clear Modbus Plus responses
 ```
 <br>
 <br>
@@ -141,6 +156,27 @@ Writing a total of 5 values(`11`, `22`, `33`, `44`, `55`) to **Holding Register*
 <br>
 ![image](https://github.com/user-attachments/assets/e3828fba-4ccb-430f-a1d6-6c5c55fb3442)\
 Enumerating supported modbus functions using `getfunctions` verb
+<br>
+<br>
+<br>
+## diag 🔧
+➡️ enumerate a given target via diagnostic functions
+<br>
+<br>
+![{AB71D51E-BD37-4938-A490-F3D213CF241C}](https://github.com/user-attachments/assets/e0e170fd-e780-46f6-b919-cb6f999998f5)
+<br>
+<br>
+## Dangerous diag 🚩
+```
+DANGEROUS_FLAGS = {
+    "--restart-comm": ("diag_restart_communication", "Restart Communication", {'toggle': True}),
+    "--force-listen-only": ("diag_force_listen_only", "Force Listen-Only Mode", {'slave': 0}),
+    "--clear-counter": ("diag_clear_counters", "Clear Counters", {'slave': 0}),
+    "--clear-overrun": ("diag_clear_overrun_counter", "Clear Overrun Counter", {'slave': 0}),
+    "--getclear-res": ("diag_getclear_modbus_response", "Get/Clear modbus plus", {'slave': 0}),
+}
+```
+Use with Extreme Caution 
 <br>
 <br>
 <br>
