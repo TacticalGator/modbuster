@@ -46,7 +46,7 @@ cd modbuster && pip3 install .
 
 # USAGE
 ```sh
-modbuster <OPTIONAL_FLAGS> {read,write,getfunctions} <HOST> <ADDRESS> <VALUES>
+modbuster <OPTIONAL_FLAGS> {read,write,getfunctions,diag} <HOST> <ADDRESS> <VALUES>
 ```
 <br>
 
