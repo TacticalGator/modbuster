@@ -1,6 +1,6 @@
 import socket
 from struct import pack
-from modbuster.verbs.common import *
+from .common import *
 
 MODBUS_TCP_HEADER_LEN = 7
 MODBUS_TCP_PROTOCOL_ID = 0

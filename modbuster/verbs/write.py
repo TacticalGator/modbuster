@@ -1,6 +1,6 @@
 from pymodbus.client import ModbusTcpClient
 from pymodbus.exceptions import ModbusIOException
-from modbuster.verbs.common import connect_to_modbus_server, parse_modbus_address
+from .common import connect_to_modbus_server, parse_modbus_address
 
 MAX_REGISTERS_PER_REQUEST = 125  # Max number of registers that can be written in a single Modbus request
 

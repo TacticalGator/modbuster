@@ -1,7 +1,7 @@
 import sys
 from pymodbus.client import ModbusTcpClient
 from pymodbus.exceptions import ModbusIOException
-from modbuster.verbs.common import connect_to_modbus_server, parse_modbus_address
+from .common import connect_to_modbus_server, parse_modbus_address
 
 def execute(args):
     """

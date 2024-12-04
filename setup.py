@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="modbuster",
-    version="0.1.0",
+    version="0.2.0",
     description="Busting ICS/SCADA over modbus",
     author="tacticalgator",
     url="https://github.com/tacticalgator/modbuster",
