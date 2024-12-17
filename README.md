@@ -103,10 +103,11 @@ options:
 ## EXAMPLES
 ➡️ 4 Verbs are currently supported
 <br>
-- [read](#read-)
-- [write](#write-)
-- [getfunctions](#getfunctions-)
-- [diag](#diag-)
+- [read](#read)
+- [write](#write)
+- [getfunctions](#getfunctions)
+- [diag](#diag)
+<br>
 <br>
 **IMPORTANT**:<br>
 Both read and write operations use **0-based** addressing internally,<br>
@@ -118,22 +119,22 @@ However addresses are often represented as **1-based**
 ➡️ single/multi read across **all 4 address ranges**
 <br>
 <br>
-![image](https://github.com/user-attachments/assets/ca776a29-fb1c-415e-85f6-91a41298b647)\
+![image](images/modbuster-read-multi-input_reg.png)\
 Reading 3 values of **Input Register**, starting from the address `300001`
 <br>
 <br>
 <br>
-![image](https://github.com/user-attachments/assets/e07f64a9-f0d4-4c31-8428-c3b11cf4fb12)\
+![image](images/modbuster-read-single-disc_in.png)\
 Reading a single value of **Discrete Input**, at the address `101992`
 <br>
 <br>
 <br>
-![image](https://github.com/user-attachments/assets/9054237d-ba8e-45f2-bcf2-e23ff1979cbd)\
+![image](images/modbuster-read-multi-coil.png)\
 Reading 16 values of **Coil**, starting from the address `1`
 <br>
 <br>
 <br>
-![image](https://github.com/user-attachments/assets/e3d63694-dccc-4952-bf6d-83d3a871eaaf)\
+![image](images/modbuster-read-multi-hold_reg.png)\
 Reading 10 values of **Holding Register**, starting from the address `400001`
 <br>
 <br>
@@ -142,14 +143,14 @@ Reading 10 values of **Holding Register**, starting from the address `400001`
 ➡️ single/multi write to **coil** and **holding register**
 <br>
 <br>
-![image](https://github.com/user-attachments/assets/e41ee352-7862-4684-8f1f-b531571189e8)\
-![{03FAD36C-2A34-4080-9ACD-6FD4CADDF3D3}](https://github.com/user-attachments/assets/2c12264b-8ff6-4d0d-bf28-6ef6fe6fdb1e)\
+![image](images/modbuster-write-multi_coil.png)\
+![image](images/modbuster-write-multi_coil2.png)\
 Writing 10 of `1` to **coil**, starting from the address `1` 
 <br>
 <br>
 <br>
-![{F6FDB7DB-5D54-49DD-B0F5-E0BA01F67C2E}](https://github.com/user-attachments/assets/be1421d1-1622-469f-8457-56bb8c0bfcbb)\
-![{FD76339B-820B-4676-BB19-6EE1C9AC7005}](https://github.com/user-attachments/assets/7caf651c-0691-4e55-942f-13f275ed9642)\
+![images](images/modbuster-write-multi_hold_reg.png)\
+![images](images/modbuster-write-multi_hold_reg2.png)\
 Writing a total of 5 values(`11`, `22`, `33`, `44`, `55`) to **Holding Register**, starting from thee address `400010`
 <br>
 <br>
@@ -158,7 +159,7 @@ Writing a total of 5 values(`11`, `22`, `33`, `44`, `55`) to **Holding Register*
 ➡️ enumerate supported modbus function of a given target
 <br>
 <br>
-![image](https://github.com/user-attachments/assets/e3828fba-4ccb-430f-a1d6-6c5c55fb3442)\
+![image](images/modbuster-getfunc.png)\
 Enumerating supported modbus functions using `getfunctions` verb
 <br>
 <br>
@@ -167,8 +168,8 @@ Enumerating supported modbus functions using `getfunctions` verb
 ➡️ enumerate a given target via diagnostic functions
 <br>
 <br>
-![{AB71D51E-BD37-4938-A490-F3D213CF241C}](https://github.com/user-attachments/assets/e0e170fd-e780-46f6-b919-cb6f999998f5)
-<br>
+![image](images/modbuster-diag.png)\
+br>
 <br>
 ## Dangerous diag 🚩
 ```
@@ -180,17 +181,17 @@ DANGEROUS_FLAGS = {
     "--getclear-res": ("diag_getclear_modbus_response", "Get/Clear modbus plus", {'slave': 0}),
 }
 ```
-Use with Extreme Caution 
+Use with EXTREME CAUTIONS 
 <br>
 <br>
 <br>
 ## ADVANCED USAGE
-![{45924414-A748-41FE-B0A8-953805E328C8}](https://github.com/user-attachments/assets/9babe1c6-99df-4f95-8ca8-9bbe97770a1d)\
+![image](images/modbuster-adv_usage.png)\
 It can be combined with other command line tools such as `watch` or `proxychains4`
 <br>
 <br>
 <br>
-![{0D477EBD-95A4-4076-B4F7-74EF48DB87D7}](https://github.com/user-attachments/assets/d2c70957-ee09-49fa-9f79-44e2d200e7bd)\
+![image](images/modbuster-adv_usage2.png)\
 Same goes for the write operation. Above example conduct a continuous write operation
 <br>
 <br>
