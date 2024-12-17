@@ -103,10 +103,10 @@ options:
 ## EXAMPLES
 ➡️ 4 Verbs are currently supported
 <br>
-- [read](#read)
-- [write](#write)
-- [getfunctions](#getfunctions)
-- [diag](#diag)
+- [read](#read-)
+- [write](#write-)
+- [getfunctions](#getfunctions-)
+- [diag](#diag-)
 <br>
 <br>
 **IMPORTANT**:<br>
@@ -119,22 +119,22 @@ However addresses are often represented as **1-based**
 ➡️ single/multi read across **all 4 address ranges**
 <br>
 <br>
-![image](images/modbuster-read-multi-input_reg.png)\
+![image](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-read-multi-input_reg.png)\
 Reading 3 values of **Input Register**, starting from the address `300001`
 <br>
 <br>
 <br>
-![image](images/modbuster-read-single-disc_in.png)\
+![image](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-read-single-disc_in.png)\
 Reading a single value of **Discrete Input**, at the address `101992`
 <br>
 <br>
 <br>
-![image](images/modbuster-read-multi-coil.png)\
+![image](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-read-multi-coil.png)\
 Reading 16 values of **Coil**, starting from the address `1`
 <br>
 <br>
 <br>
-![image](images/modbuster-read-multi-hold_reg.png)\
+![image](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-read-multi-hold_reg.png)\
 Reading 10 values of **Holding Register**, starting from the address `400001`
 <br>
 <br>
@@ -143,14 +143,14 @@ Reading 10 values of **Holding Register**, starting from the address `400001`
 ➡️ single/multi write to **coil** and **holding register**
 <br>
 <br>
-![image](images/modbuster-write-multi_coil.png)\
-![image](images/modbuster-write-multi_coil2.png)\
+![image](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-write-multi_coil.png)\
+![image](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-write-multi_coil2.png)\
 Writing 10 of `1` to **coil**, starting from the address `1` 
 <br>
 <br>
 <br>
-![images](images/modbuster-write-multi_hold_reg.png)\
-![images](images/modbuster-write-multi_hold_reg2.png)\
+![images](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-write-multi_hold_reg.png)\
+![images](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-write-multi_hold_reg2.png)\
 Writing a total of 5 values(`11`, `22`, `33`, `44`, `55`) to **Holding Register**, starting from thee address `400010`
 <br>
 <br>
@@ -159,7 +159,7 @@ Writing a total of 5 values(`11`, `22`, `33`, `44`, `55`) to **Holding Register*
 ➡️ enumerate supported modbus function of a given target
 <br>
 <br>
-![image](images/modbuster-getfunc.png)\
+![image](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-getfunc.png)\
 Enumerating supported modbus functions using `getfunctions` verb
 <br>
 <br>
@@ -168,7 +168,7 @@ Enumerating supported modbus functions using `getfunctions` verb
 ➡️ enumerate a given target via diagnostic functions
 <br>
 <br>
-![image](images/modbuster-diag.png)\
+![image](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-diag.png)\
 br>
 <br>
 ## Dangerous diag 🚩
@@ -186,12 +186,12 @@ Use with EXTREME CAUTIONS
 <br>
 <br>
 ## ADVANCED USAGE
-![image](images/modbuster-adv_usage.png)\
+![image](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-adv_usage.png)\
 It can be combined with other command line tools such as `watch` or `proxychains4`
 <br>
 <br>
 <br>
-![image](images/modbuster-adv_usage2.png)\
+![image](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-adv_usage2.png)\
 Same goes for the write operation. Above example conduct a continuous write operation
 <br>
 <br>
