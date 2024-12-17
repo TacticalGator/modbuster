@@ -101,8 +101,12 @@ options:
 <br>
 
 ## EXAMPLES
-➡️ 3 Verbs are currently supported
+➡️ 4 Verbs are currently supported
 <br>
+- [read](#read-)
+- [write](#write-)
+- [getfunctions](#getfunctions-)
+- [diag](#diag-)
 <br>
 **IMPORTANT**:<br>
 Both read and write operations use **0-based** addressing internally,<br>
