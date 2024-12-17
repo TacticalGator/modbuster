@@ -101,7 +101,7 @@ options:
 <br>
 
 ## EXAMPLES
-➡️ 4 Verbs are currently supported
+:arrow_right: 4 Verbs are currently supported
 <br>
 - [read](#read-)
 - [write](#write-)
@@ -115,63 +115,63 @@ However addresses are often represented as **1-based**
 <br>
 <br>
 <br>
-## read 📖
-➡️ single/multi read across **all 4 address ranges**
+## read :book:
+:arrow_right: single/multi read across **all 4 address ranges**
 <br>
 <br>
-![image](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-read-multi-input_reg.png)\
+![modbuster-read-multi-input_reg](https://github.com/TacticalGator/modbuster/blob/main/images/modbuster-read-multi-input_reg.png)\
 Reading 3 values of **Input Register**, starting from the address `300001`
 <br>
 <br>
 <br>
-![image](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-read-single-disc_in.png)\
+![modbuster-read-single-disc_in](https://github.com/TacticalGator/modbuster/blob/main/images/modbuster-read-single-disc_in.png)\
 Reading a single value of **Discrete Input**, at the address `101992`
 <br>
 <br>
 <br>
-![image](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-read-multi-coil.png)\
+![modbuster-read-multi-coil](https://github.com/TacticalGator/modbuster/blob/main/images/modbuster-read-multi-coil.png)\
 Reading 16 values of **Coil**, starting from the address `1`
 <br>
 <br>
 <br>
-![image](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-read-multi-hold_reg.png)\
+![modbuster-read-multi-hold_reg](https://github.com/TacticalGator/modbuster/blob/main/images/modbuster-read-multi-hold_reg.png)\
 Reading 10 values of **Holding Register**, starting from the address `400001`
 <br>
 <br>
 <br>
-## write ✍🏻
-➡️ single/multi write to **coil** and **holding register**
+## write :pencil2:
+:arrow_right: single/multi write to **coil** and **holding register**
 <br>
 <br>
-![image](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-write-multi_coil.png)\
-![image](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-write-multi_coil2.png)\
+![modbuster-write-multi_coil](https://github.com/TacticalGator/modbuster/blob/main/images/modbuster-write-multi_coil.png)\
+![modbuster-write-multi_coil2](https://github.com/TacticalGator/modbuster/blob/main/images/modbuster-write-multi_coil2.png)\
 Writing 10 of `1` to **coil**, starting from the address `1` 
 <br>
 <br>
 <br>
-![images](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-write-multi_hold_reg.png)\
-![images](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-write-multi_hold_reg2.png)\
+![modbuster-write-multi_hold_reg](https://github.com/TacticalGator/modbuster/blob/main/images/modbuster-write-multi_hold_reg.png)\
+![modbuster-write-multi_hold_reg2](https://github.com/TacticalGator/modbuster/blob/main/images/modbuster-write-multi_hold_reg2.png)\
 Writing a total of 5 values(`11`, `22`, `33`, `44`, `55`) to **Holding Register**, starting from thee address `400010`
 <br>
 <br>
 <br>
-## getfunctions ƒ
-➡️ enumerate supported modbus function of a given target
+## getfunctions :scroll:
+:arrow_right: enumerate supported modbus function of a given target
 <br>
 <br>
-![image](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-getfunc.png)\
+![modbuster-getfunc](https://github.com/TacticalGator/modbuster/blob/main/images/modbuster-getfunc.png)\
 Enumerating supported modbus functions using `getfunctions` verb
 <br>
 <br>
 <br>
-## diag 🔧
-➡️ enumerate a given target via diagnostic functions
+## diag :wrench:
+:arrow_right: enumerate a given target via diagnostic functions
 <br>
 <br>
-![image](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-diag.png)\
+![modbuster-diag](https://github.com/TacticalGator/modbuster/blob/main/images/modbuster-diag.png)\
 br>
 <br>
-## Dangerous diag 🚩
+## Dangerous diag :warning:
 ```
 DANGEROUS_FLAGS = {
     "--restart-comm": ("diag_restart_communication", "Restart Communication", {'toggle': True}),
@@ -181,17 +181,17 @@ DANGEROUS_FLAGS = {
     "--getclear-res": ("diag_getclear_modbus_response", "Get/Clear modbus plus", {'slave': 0}),
 }
 ```
-Use with EXTREME CAUTIONS 
+Use with EXTREME CAUTIONS
 <br>
 <br>
 <br>
 ## ADVANCED USAGE
-![image](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-adv_usage.png)\
+![modbuster-adv_usage](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-adv_usage.png)\
 It can be combined with other command line tools such as `watch` or `proxychains4`
 <br>
 <br>
 <br>
-![image](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-adv_usage2.png)\
+![modbuster-adv_usage2](https://raw.githubusercontent.com/TacticalGator/modbuster/main/images/modbuster-adv_usage2.png)\
 Same goes for the write operation. Above example conduct a continuous write operation
 <br>
 <br>
