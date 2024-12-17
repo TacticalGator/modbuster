@@ -101,18 +101,16 @@ options:
 <br>
 
 ## EXAMPLES
-:arrow_right: 4 Verbs are currently supported
+:arrow_right: 4 Verbs are currently supported:
+- [read](#read-book)
+- [write](#write-pencil2)
+- [getfunctions](#getfunctions-scroll)
+- [diag](#diag-wrench)  
 <br>
-- [read](#read-)
-- [write](#write-)
-- [getfunctions](#getfunctions-)
-- [diag](#diag-)
-<br>
-<br>
-**IMPORTANT**:<br>
-Both read and write operations use **0-based** addressing internally,<br>
-However addresses are often represented as **1-based**
-<br>
+
+**IMPORTANT**:  
+Both read and write operations use **0-based** addressing internally,  
+However, addresses are often represented as **1-based**.  
 <br>
 <br>
 ## read :book:
@@ -169,7 +167,7 @@ Enumerating supported modbus functions using `getfunctions` verb
 <br>
 <br>
 ![modbuster-diag](https://github.com/TacticalGator/modbuster/blob/main/images/modbuster-diag.png)\
-br>
+<br>
 <br>
 ## Dangerous diag :warning:
 ```
