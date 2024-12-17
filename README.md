@@ -10,6 +10,11 @@ $~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Modbuster is a pure Python 3 command-line tool, powered by pymodbus, specifically designed for penetration testers, red teamers, and security researchers. It enables precise Modbus TCP interactions, including single and multi-read operations for Coils, Discrete Input Ranges, Input Registers, and Holding Registers, as well as single and multi-write capabilities for Coils and Holding Registers. Beyond these operations, it facilitates enumeration of supported Modbus function codes, aiding in vulnerability assessments and device exploration. With its straightforward interface and advanced features, Modbuster is an essential tool for anyone investigating or auditing Modbus environments.
 <br>
 <br>
+
+- [INSTALLATION](#installation)
+- [USAGE](#usage)
+- [EXAMPLES](#examples)
+- [DISCLAIMER](#disclaimer)  
 <br>
 
 # INSTALLATION
