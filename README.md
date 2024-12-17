@@ -58,9 +58,9 @@ modbuster <OPTIONAL_FLAGS> {read,write,getfunctions,diag} <HOST> <ADDRESS> <VALU
 
 ```sh
 # modbuster --help
-usage: modbuster.py [-h] [-s SLAVE] [-p PORT] [-v] [--restart-comm] [--force-listen-only] [--clear-counter] [--clear-overrun]
-                    [--getclear-res]
-                    {read,write,getfunctions,diag}
+usage: modbuster [-h] [--version] [-s SLAVE] [-p PORT] [-v] [--restart-comm] [--force-listen-only] [--clear-counter] [--clear-overrun]
+                 [--getclear-res]
+                 {read,write,getfunctions,diag}
 
   Busting ICS/SCADA over Modbus
 
@@ -74,13 +74,14 @@ examples:
 positional arguments:
   {read,write,getfunctions,diag}
                         Command to execute:
-                          read          Read holding & input registers, coils, or disecrete inputs from a Modbus server
+                          read          Read holding & input registers, coils, or discrete inputs from a Modbus server
                           write         Write values to registers or coils on a Modbus server
                           getfunctions  Enumerate supported Modbus function codes
                           diag          Perform diagnostic functions
 
 options:
   -h, --help            show this help message and exit
+  --version             Show program's version number and exit.
   -s SLAVE, --slave SLAVE
                         Specify the slave ID (default: 0)
   -p PORT, --port PORT  Specify the Modbus server port (default: 502)
