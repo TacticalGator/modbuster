@@ -3,6 +3,9 @@ import sys
 import os
 import argparse
 
+# Define version
+__version__ = "0.2.0"
+
 # Adjust sys.path if running as a script
 if __name__ == "__main__" and __package__ is None:
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -55,12 +58,20 @@ def main():
         formatter_class=argparse.RawTextHelpFormatter,
     )
 
+    # Version flag
+    parser.add_argument(
+        '--version', 
+        action='version', 
+        version=f"%(prog)s {__version__}", 
+        help="Show program's version number and exit."
+    )
+
     parser.add_argument(
         'command',
         choices=['read', 'write', 'getfunctions', 'diag'],
         help=(
             "Command to execute:\n"
-            "  read          Read holding & input registers, coils, or disecrete inputs from a Modbus server\n"
+            "  read          Read holding & input registers, coils, or discrete inputs from a Modbus server\n"
             "  write         Write values to registers or coils on a Modbus server\n"
             "  getfunctions  Enumerate supported Modbus function codes\n"
             "  diag          Perform diagnostic functions\n"
